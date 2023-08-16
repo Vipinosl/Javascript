@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- button which is used to open the new window -->
+    <button id="openWindow">Open New Window</button>    
+    <script>
+        //for displaying the new window of width =500px and height = 400px.
+        const openWindow = document.getElementById("openWindow");
+        openWindow.addEventListener('click',function(){
+            const newWindow= window.open('','_blank','width =500px,height =400px');
+        });
+        //onclick on button the new window will be open of given width and height.
+    </script>
+</body>
+</html>

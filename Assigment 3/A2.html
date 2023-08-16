@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for changing the background color from red to blue -->
+    <div id="myDiv" >
+        <p> "Click the button to change the background color."</p>
+        <button onclick="func()">Change Color</button>
+    </div>
+
+    <script>
+        //here we target the element by its id,and set the color to the red.
+        const div = document.getElementById("myDiv");
+        if (div){
+            div.style.backgroundColor="red";
+        }
+
+        //function for changing the color to blue on clicking
+        function func(){
+            var data=document.getElementById("myDiv");
+            if (data){
+                data.style.backgroundColor="blue";
+            }
+        }
+
+    </script>
+</body>
+</html>

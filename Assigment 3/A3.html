@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- for adding the element and removing the first element -->
+    <ul id="myList"></ul>
+    <button id ="additem">Add Item</button>
+    <button id="removeitem">Remove First Item</button>
+
+    <script>
+        //writing the function for adding the item to the list.
+        function listappend(){
+
+            let item=prompt("Enter an item");
+
+            if(item){
+                let List = document.getElementById("myList");
+                let listItem = document.createElement("li");
+                listItem.textContent = item;
+
+                List.appendChild(listItem);
+
+            }else{
+                console.log("Enter the input");
+            }
+        }
+        //function for removing first item of the list.
+        function removeitem(){
+            let myList=document.getElementById("myList");
+            if(myList.children.length>0){
+                myList.removeChild(myList.children[0]);
+            }
+        }
+
+        let removeItemButton= document.getElementById("removeitem");
+        removeItemButton.addEventListener("click",removeitem);
+
+        let addItemButton = document.getElementById("additem");
+        addItemButton.addEventListener("click",listappend)
+
+    </script>
+
+</body>
+</html>

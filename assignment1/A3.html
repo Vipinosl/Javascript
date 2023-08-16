@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> 
+        <!-- for input -->
+        <input type="number"  id="day_number">
+        <label for="day_name" id="day_name"></label><br>
+        <button id="show_day_name">Convert to week name</button>
+    </p>
+
+    <script>
+        //for getting the name of days through number.
+        //calling the element by id to do the operation and using the click we can instruct the function what to do.
+        document.getElementById("show_day_name").addEventListener("click", function(e){
+            input_field = document.getElementById("day_number");
+            output_field = document.getElementById("day_name");
+            //taking the empty string .
+            let ret = "";
+            switch(Number(input_field.value))
+            {
+                case 1 : ret = "Monday";break;
+                case 2 : ret = "Tuesday";break;
+                case 3 : ret = "Wednesday";break;
+                case 4 : ret = "Thursday";break;
+                case 5 : ret = "Friday"; break;
+                case 6 : ret = "Saturday"; break;
+                case 7 : ret = "Sunday";break;
+                default : ret = "Invalid respose"; break;
+            }
+            output_field.innerText= ret;
+        })
+    </script>
+
+
+</body>
+</html>
